@@ -1,17 +1,10 @@
 ---
+import MainLayout from '../layouts/MainLayout.astro';
+let title = 'Diana’s ART!';
 // component front matter never runs in the browser
 console.log('index.astro loaded');
 ---
-<!doctype html>
-<html>
-  <head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" aria-description="Artemis icon created by max.icons" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Diana’s ART!</title>
-	</head>
-  <body>
-    <h1>What is Art?</h1>
-  </body>
-</html>
+<MainLayout>
+  <h1>What is Art?</h1>
+  <p><a href="/PechaKucha">Pecha Kucha</a></p>
+</MainLayout>
