@@ -1,0 +1,26 @@
+{
+  "name": "diana-artwork.github.io",
+  "version": "1.0.0",
+  "description": "This site is a digital portfolio repository of original artworks, mostly abstract, by Diana Christine Griffith.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diana-Artwork/Diana-Artwork.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/Diana-Artwork/Diana-Artwork.github.io/issues"
+  },
+  "homepage": "https://Diana-Artwork.github.io",
+  "dependencies": {
+    "astro": "^1.7.2"
+  }
+}
