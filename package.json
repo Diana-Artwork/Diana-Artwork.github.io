@@ -22,5 +22,8 @@
   "homepage": "https://Diana-Artwork.github.io",
   "dependencies": {
     "astro": "^1.7.2"
+  },
+  "devDependencies": {
+    "sass": "^1.57.1"
   }
 }

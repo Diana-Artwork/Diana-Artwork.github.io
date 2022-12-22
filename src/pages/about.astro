@@ -1,0 +1,65 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Diana_portrait from '../images/webpages-assets/Diana_portrait.png';
+import Diana_working from '../images/webpages-assets/Diana_working.png';
+---
+<style lang="scss" scoped>
+  html {
+    background: url(../images/webpages-assets/blank_Canvas_texture.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  main {
+    margin: 0 auto;
+		padding: 1.5rem;
+		max-width: 100ch;
+    .Diana_images {
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+  h1 {
+		font-size: 5rem;
+		font-weight: 800;
+		margin: 0;
+    background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+  h2 { font-size: 3rem; }
+  .well {
+		padding: 1.5rem;
+		background-color: white;
+		background-image: var(--accent-gradient);
+		background-size: 400%;
+		border-radius: 0.5rem;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+	}
+</style>
+<MainLayout title="About Diana">
+  <main>
+    <h1>About Diana</h1>
+    <p class="well">Diana is an Artist, Writer, Social Worker, Community Organizer, Psychoeducational Presenter, and Public Speaker.</p>
+    <br>
+    <img src={Diana_portrait} alt="picture of Diana" class="Diana_images">
+    <br><br>
+    <section class="well">
+      <h2 style="color:#918bde;">Diana’s Vision</h2>
+      <ul>
+        <li>To amplify voices of progressive thought leaders in the Orlando area making a positive impact on their communities.</li>
+        <li>To educate, support, and empower people to go after goals they have for themselves both professionally&#65286;personally.</li>
+        <li>To offer resources for mentorship, advice, and shared stories about unique struggles women in our society face.</li>
+        <li>To be a person for whom intersectional inclusivity&#65286;allyship matter.</li>
+      </ul>
+      <p><a href="/" style="text-decoration:none;color:#918bde;">&#127968;&nbsp;return to Homepage</a></p>
+    </section>
+    <br>
+    <img src={Diana_working} alt="Diana working" class="Diana_images">
+  </main>
+</MainLayout>

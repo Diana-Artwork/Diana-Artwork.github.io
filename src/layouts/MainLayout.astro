@@ -14,3 +14,21 @@ let {title} = Astro.props;
     <slot></slot>
   </body>
 </html>
+<style is:global type="text/css">
+	:root {
+		--accent: 145, 139, 222;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		height: 100%;
+		font-family: 'Poppins', sans-serif;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	code {
+		font-family: 'Space Mono', Monaco, Courier New, monospace;
+	}
+</style>

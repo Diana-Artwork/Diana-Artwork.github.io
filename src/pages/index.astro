@@ -1,10 +1,81 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-let title = 'Diana’s ART!';
+import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro';
+import greetings_from_Orlando_Diana from '../images/webpages-assets/greetings_from_Orlando_Diana.png';
 // component front matter never runs in the browser
 console.log('index.astro loaded');
 ---
-<MainLayout>
-  <h1>What is Art?</h1>
-  <p><a href="/PechaKucha">Pecha Kucha</a></p>
+<style lang="scss" scoped>
+  html {
+    background: url(../images/webpages-assets/blank_Canvas_texture.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 100ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+    code {
+      font-size: 0.875em;
+      font-weight: bold;
+      background: rgba(var(--accent), 12%);
+      color: rgb(var(--accent));
+      border-radius: 4px;
+      padding: 0.3em 0.45em;
+      a { text-decoration: none; }
+    }
+    strong { color: rgb(var(--accent)); }
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
+<MainLayout title="Welcome to Diana’s ART!">
+  <main>
+		<h1>Welcome to <span class="text-gradient">Diana’s ART</span> portfolio.</h1>
+		<p class="instructions">
+			<strong>What is Art?</strong><br>Follow Diana’s creative work as she continues to contemplate that question and experiment with abstract artistic expressions in a variety of media.
+      <br>Or explore more of her <code><a href="https://www.orlandoladyboss.com/about-diana/">past work here</a></code>.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/about"
+				title="About Diana"
+				body="Learn more about Diana!"
+			/>
+			<Card
+				href="/PechaKucha"
+				title="Pecha Kucha"
+				body="Check out Diana Griffith’s presentation at Pecha Kucha Orlando v26 exploring the topic: “What is Art?”"
+			/>
+		</ul>
+    <img src={greetings_from_Orlando_Diana} width="100%" style="border-radius:4px;">
+	</main>
+  <Footer title="Footer"></Footer>
 </MainLayout>
