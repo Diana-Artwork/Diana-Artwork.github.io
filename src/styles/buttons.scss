@@ -1,0 +1,42 @@
+.rainbow{
+  background-color: #918bde;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: all .2s ease-in-out;
+}
+.rainbow:hover {
+  transform: scale(1.05);
+  background: linear-gradient(105deg,
+    rgba(228,3,3,0.25), rgba(255,140,0,0.25), rgba(255,237,0,0.25), rgba(0,128,38,0.25), rgba(36,64,142,0.25), rgba(115,41,130,0.25),
+    /* Repeat your base gradient stops */
+    rgba(228,3,3,0.25), rgba(255,140,0,0.25), rgba(255,237,0,0.25), rgba(0,128,38,0.25), rgba(36,64,142,0.25), rgba(115,41,130,0.25),
+    /* Repeat your first gradient stop */
+    rgba(228,3,3,0.25));
+  background-size: 1000% 1000%;
+  animation: rainbow 12s linear infinite;
+  -webkit-animation: rainbow 12s linear infinite;
+  -z-animation: rainbow 12s linear infinite;
+  -o-animation: rainbow 12s linear infinite;
+}
+@-webkit-keyframes rainbow {
+  0% { background-position: 100% 100% }
+   100% { background-position: 0% 0% }
+ }
+ @-moz-keyframes rainbow {
+    0% { background-position: 100% 100% }
+   100% { background-position: 0% 0% }
+ }
+ @-o-keyframes rainbow {
+    0% { background-position: 100% 100% }
+   100% { background-position: 0% 0% }
+ }
+ @keyframes rainbow { 
+    0% { background-position: 100% 100% }
+   100% { background-position: 0% 0% }
+ }
+.rainbow_border {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to top right, #E40303, #FF8C00, #FFED00, #008026, #24408E, #732982);
+  border-image-slice: 1;
+}

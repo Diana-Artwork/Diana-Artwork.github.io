@@ -7,75 +7,45 @@ import greetings_from_Orlando_Diana from '../images/webpages-assets/greetings_fr
 console.log('index.astro loaded');
 ---
 <style lang="scss" scoped>
-  html {
-    background: url(../images/webpages-assets/blank_Canvas_texture.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 100ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-    .text-gradient {
-      background-image: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 400%;
-      background-position: 0%;
-    }
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-    code {
-      font-size: 0.875em;
-      font-weight: bold;
-      background: rgba(var(--accent), 12%);
-      color: rgb(var(--accent));
-      border-radius: 4px;
-      padding: 0.3em 0.45em;
-      a { text-decoration: none; }
-    }
-    strong { color: rgb(var(--accent)); }
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+	@import "../styles/styles.scss";
+	@import "../styles/buttons.scss";
 </style>
 <MainLayout title="Welcome to Diana’s ART!">
   <main>
-		<h1>Welcome to <span class="text-gradient">Diana’s ART</span> portfolio.</h1>
+		<h1>Welcome to <a href="/art" class="text_gradient">Diana’s ART</a> portfolio!</h1>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/acrylic"
+				title="Acrylics"
+				body="🎨 Check out Diana’s abstract acrylic＆mixed-media paintings! 🖼🖌"
+			/>
+			<Card
+				href="/watercolor"
+				title="Watercolors"
+				body="🎨 Check out Diana’s watercolor paintings! 💦 (including some beautifully blended mixed-media watercolor＆pens composites)"
+			/>
+		</ul>
 		<p class="instructions">
-			<strong>What is Art?</strong><br>Follow Diana’s creative work as she continues to contemplate that question and experiment with abstract artistic expressions in a variety of media.
-      <br>Or explore more of her <code><a href="https://www.orlandoladyboss.com/about-diana/">past work here</a></code>.
+			<strong class="text_gradient" style="font-size:2rem;">What is Art?</strong>
+			<br>Follow the poignant journey of Diana’s creative works as she continues to contemplate that question and boldly experiment with abstract artistic expressions using a plethora of innovative techniques across a variety of (often mixed) media!
+      <br><br>Her work has many inspirations, but she particularly admires many of the styles and methodologies pioneered by some of the <code>“<a href="https://www.goodreads.com/book/show/56698434-9th-street-women" target="_blank">9th Street Women</a>”</code> such as Lee Krasner or Elaine de Kooning, in addition to the celebrated Japanese abstract artist Yayoi Kusama, among many others… 
+			<br><br>Alternatively, if you’re curious to learn about some impressive accomplishments of inspirational women in the Orlando area, you can explore some of Diana’s <a href="https://www.orlandoladyboss.com/about-diana/">past work here</a> or check out her <a href="https://www.orlandoladyboss.com/category/podcast/" target="_blank">Orlando Lady Boss podcast</a>.
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="/about"
 				title="About Diana"
-				body="Learn more about Diana!"
+				body="Learn more about who Diana is as a person, what she primarily tends to be focused on these days, and some core values that are important to her!"
 			/>
 			<Card
 				href="/PechaKucha"
 				title="Pecha Kucha"
-				body="Check out Diana Griffith’s presentation at Pecha Kucha Orlando v26 exploring the topic: “What is Art?”"
+				body="Check out Diana Griffith’s inspiring June 2019 presentation at Orlando “Pecha Kucha” v26 exploring the fascinating but contentious topic: “What is Art?”"
 			/>
 		</ul>
-    <img src={greetings_from_Orlando_Diana} width="100%" style="border-radius:4px;">
+		<div style="text-align:center;">
+			<img src={greetings_from_Orlando_Diana} width="60%" style="border-radius:29%;">
+		</div>
 	</main>
   <Footer title="Footer"></Footer>
 </MainLayout>

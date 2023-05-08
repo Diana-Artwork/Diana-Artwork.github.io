@@ -13,8 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/Diana-Artwork/Diana-Artwork.github.io.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "art",
+    "artwork",
+    "Astro"
+  ],
+  "author": "Diana Christine Griffith",
   "license": "",
   "bugs": {
     "url": "https://github.com/Diana-Artwork/Diana-Artwork.github.io/issues"

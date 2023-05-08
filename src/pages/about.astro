@@ -4,6 +4,8 @@ import Diana_portrait from '../images/webpages-assets/Diana_portrait.png';
 import Diana_working from '../images/webpages-assets/Diana_working.png';
 ---
 <style lang="scss" scoped>
+  @import "../styles/styles.scss";
+  @import "../styles/buttons.scss";
   html {
     background: url(../images/webpages-assets/blank_Canvas_texture.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -14,23 +16,12 @@ import Diana_working from '../images/webpages-assets/Diana_working.png';
   main {
     margin: 0 auto;
 		padding: 1.5rem;
-		max-width: 100ch;
+		max-width: 90vw;
     .Diana_images {
-      border-radius: 10px;
+      border-radius: 50%;
       width: 100%;
     }
   }
-  h1 {
-		font-size: 5rem;
-		font-weight: 800;
-		margin: 0;
-    background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-  h2 { font-size: 3rem; }
   .well {
 		padding: 1.5rem;
 		background-color: white;
@@ -44,20 +35,25 @@ import Diana_working from '../images/webpages-assets/Diana_working.png';
 </style>
 <MainLayout title="About Diana">
   <main>
-    <h1>About Diana</h1>
-    <p class="well">Diana is an Artist, Writer, Social Worker, Community Organizer, Psychoeducational Presenter, and Public Speaker.</p>
+    <div style="width:100%;margin:1em;">
+      <h1 class="text_gradient" style="float:left;">About Diana</h1>
+      <a href="/" class="rainbow rainbow_border" style="font-size:1.5em;position:absolute;top:1em;right:1em;">&#x1f3e0;&#x202f;&#x1f519;</a>
+    </div>
+    <p class="well" style="clear:both;">Diana Christine Griffith is an Artist, Writer, Social Worker, Community Organizer, Psychoeducational Presenter, and Public Speaker.</p>
     <br>
-    <img src={Diana_portrait} alt="picture of Diana" class="Diana_images">
+    <img src={Diana_portrait} 
+      alt="picture of Diana" 
+      class="Diana_images">
     <br><br>
     <section class="well">
-      <h2 style="color:#918bde;">Diana’s Vision</h2>
-      <ul>
+      <h2 class="text_gradient" style="margin:0;">Diana’s Vision</h2>
+      <ul style="margin:0;">
         <li>To amplify voices of progressive thought leaders in the Orlando area making a positive impact on their communities.</li>
         <li>To educate, support, and empower people to go after goals they have for themselves both professionally&#65286;personally.</li>
         <li>To offer resources for mentorship, advice, and shared stories about unique struggles women in our society face.</li>
         <li>To be a person for whom intersectional inclusivity&#65286;allyship matter.</li>
       </ul>
-      <p><a href="/" style="text-decoration:none;color:#918bde;">&#127968;&nbsp;return to Homepage</a></p>
+      <p><a href="/" class="rainbow rainbow_border" style="text-decoration:none;color:black;">&#127968;&nbsp;return to Homepage</a></p>
     </section>
     <br>
     <img src={Diana_working} alt="Diana working" class="Diana_images">
