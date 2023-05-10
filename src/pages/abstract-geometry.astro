@@ -16,7 +16,7 @@ import MobiusWomanAbstract from './../images/acrylic/Mobius_Woman_Anatomy.jpg';
   @import "./../styles/carousel.scss";
   @import "./../styles/masonry.scss";
   @import "./../styles/buttons.scss";
-  #h1geometry { margin:1em auto 1em auto;text-align:center;max-width:80%; }
+  #h1geometry { margin:0 auto;max-width:80%; }
   .geometry_gradient {
     position: relative;
     background-image: linear-gradient(135deg, #38241c 0%, #7d391b 25%, #784434 50%, #851c04 75%, #d97c53 100%);
@@ -25,7 +25,7 @@ import MobiusWomanAbstract from './../images/acrylic/Mobius_Woman_Anatomy.jpg';
     text-shadow: 1px 1px 2px rgba(0,0,0, 0.3);
   }
 </style>
-<div style="margin:0;">
+<div style="margin:2em auto 1em auto;text-align:center;">
   <h1 id="h1geometry">Diana&rsquo;s <span class="geometry_gradient">Abstract Geometric Paintings</span><span>&#x202f;&#x1f3a8;&#x1f58c;</span></h1>
   <a href="/" class="rainbow rainbow_border" style="font-size:1.5em;position:absolute;top:1em;right:1em;">&#x1f3e0;&#x202f;&#x1f519;</a>
 </div>
@@ -188,9 +188,6 @@ import MobiusWomanAbstract from './../images/acrylic/Mobius_Woman_Anatomy.jpg';
   prevButton.addEventListener('click', event => {
     this.handleLeft(event);
   })
-  this.doc?.keydown(function(event) {
-    if (event.keycode === 37) this.handleLeft(event);
-  })
   // click RIGHT moves slides to the Right
   function handleRight(e) {
     const currentSlide = track.querySelector('.current-slide');
@@ -213,4 +210,21 @@ import MobiusWomanAbstract from './../images/acrylic/Mobius_Woman_Anatomy.jpg';
     const targetSlide = slides[targetIndex];
     moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
   })
-  </script>
+  // handle arrow keys carousel
+  document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        handleLeft(e);
+        break;
+      case 38:
+        window.scrollTo(0,0);
+        break;
+      case 39:
+        handleRight(e);
+        break;
+      case 40:
+        window.scrollTo(0, document.body.scrollHeight);
+        break;
+    }
+  }; 
+</script>

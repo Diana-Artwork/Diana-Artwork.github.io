@@ -15,7 +15,7 @@ import PiercingGaze2018 from './../images/acrylic/Piercing_Gaze_2018.png';
   @import "./../styles/carousel.scss";
   @import "./../styles/masonry.scss";
   @import "./../styles/buttons.scss";
-  #h1surrealism { margin:1em auto 0 auto;text-align:center;max-width: 70%; }
+  #h1surrealism { margin:0 auto;max-width: 70%; }
   .surrealist_gradient {
     position: relative;
     background-image: linear-gradient(135deg, #000000 0%, #372c2b 10%, #695a5d 25%, #8f827c 50%, #89716a 75%, #a09692 100%);
@@ -24,7 +24,7 @@ import PiercingGaze2018 from './../images/acrylic/Piercing_Gaze_2018.png';
     text-shadow: 1px 1px 2px rgba(0,0,0, 0.3);
   }
 </style>
-<div style="margin:0;">
+<div style="margin:2em auto 1em auto;text-align:center;">
   <h1 id="h1surrealism">Diana&rsquo;s <span class="surrealist_gradient">Surrealist Paintings</span><span>&#x202f;&#x1f3a8;&#x1f58c;</span></h1>
   <a href="/" class="rainbow rainbow_border" style="font-size:1.5em;position:absolute;top:1em;right:1em;">&#x1f3e0;&#x202f;&#x1f519;</a>
 </div>
@@ -179,9 +179,6 @@ import PiercingGaze2018 from './../images/acrylic/Piercing_Gaze_2018.png';
   prevButton.addEventListener('click', event => {
     this.handleLeft(event);
   })
-  this.doc?.keydown(function(event) {
-    if (event.keycode === 37) this.handleLeft(event);
-  })
   // click RIGHT moves slides to the Right
   function handleRight(e) {
     const currentSlide = track.querySelector('.current-slide');
@@ -204,4 +201,21 @@ import PiercingGaze2018 from './../images/acrylic/Piercing_Gaze_2018.png';
     const targetSlide = slides[targetIndex];
     moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
   })
-  </script>
+  // handle arrow keys carousel
+  document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        handleLeft(e);
+        break;
+      case 38:
+        window.scrollTo(0,0);
+        break;
+      case 39:
+        handleRight(e);
+        break;
+      case 40:
+        window.scrollTo(0, document.body.scrollHeight);
+        break;
+    }
+  }; 
+</script>

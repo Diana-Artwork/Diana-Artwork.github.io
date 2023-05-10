@@ -3,6 +3,7 @@ import './../styles/styles.scss';
 import './../styles/masonry.scss';
 import MainLayout from './../layouts/MainLayout.astro';
 import Card from './../components/Card.astro';
+import bowArtemesian from './../images/webpages-assets/bow-arrow_Artemesian.png';
 import WarriorImage from './../images/acrylic/WARRIOR/WARRIOR_22x28_mixed_media.jpg';
 import Bifrost from './../images/acrylic/Bifrost/Bifrost.jpg';
 import Breathe from './../images/acrylic/Bifrost/Breathe_2018_Bifrost.png';
@@ -73,380 +74,393 @@ import SelfPortraitAcrylic from './../images/acrylic/Self-Portrait_acrylic_24x30
   @import "./../styles/buttons.scss";
 	@import "./../styles/styles.scss";
   @import "./../styles/masonry.scss";
-  #h1acrylic { margin:0 auto;text-align:center;max-width:75%; }
+  #h1acrylic { margin:0 auto;max-width:75%; }
 </style>
 <MainLayout title="Check out some of Diana’s acrylic paintings!">
-<main>
-  <div style="margin:0;">
-    <h1 id="h1acrylic"><span>&#x202f;&#x1f5bc;&#x1f58c;&#x202f;</span>Diana&rsquo;s <span class="text_gradient">Abstract Acrylics</span></h1>
-    <a href="/" class="rainbow rainbow_border" style="font-size:1.5em;position:absolute;top:1em;right:1em;">&#x1f3e0;&#x202f;&#x1f519;</a>
+  <main style="padding-bottom:0;">
+    <div style="margin:2em auto 1em auto;text-align:center;">
+      <h1 id="h1acrylic"><span>&#x202f;&#x1f5bc;&#x1f58c;&#x202f;</span>Diana&rsquo;s <span class="text_gradient">Abstract Acrylics</span></h1>
+      <a href="/" class="rainbow rainbow_border" style="font-size:1.5em;position:absolute;top:1em;right:1em;">&#x1f3e0;&#x202f;&#x1f519;</a>
+    </div>
+    <ul role="list" class="link-card-grid" style="clear:both;">
+      <Card
+        href="/abstract-masterpieces"
+        title="Abstract Acrylic Masterpieces"
+        body="Check out a “special selections” gallery of some of the abstract paintings that Diana is personally proudest of, most of which have also been especially widely acclaimed by those familiar with her work, comissioned, or prominently displayed somewhere as standout pieces that arguably represent some of her best work!"
+      />
+      <Card
+        href="/abstract-surrealism"
+        title="Abstract Surrealist Acrylics"
+        body="Check out some of Diana's surrealist style acrylic paintings!"
+      />
+      <Card
+        href="/abstract-figures"
+        title="Abstract Figures"
+        body="Check out some of Diana's acrylics featuring at least some abstract figures, bodies, or anatomical parts."
+      />
+      <Card
+        href="/abstract-geometry"
+        title="Abstract Geometries"
+        body="Check out some of Diana's abstract paintings which focus on geometric shapes as prominent compositional motifs!"
+      />
+      <Card
+        href="/abstract-landscapes"
+        title="Abstract or Impressionistic Landscapes"
+        body="Check out some of Diana's abstract paintings which evoke natrual or landscape scenery!"
+      />
+      <Card
+        href="/abstract-seascapes"
+        title="Abstract or Impressionistic Aquatic or Coastal Seascapes"
+        body="Check out some of Diana's abstract paintings which evoke natrual aquatic, coastal, or beach themed scenery!"
+      />
+    </ul>
+  </main>
+</MainLayout>
+<br>
+<div style="text-align:center;margin:1em;">
+  <img src={bowArtemesian} style="width:5em;">
+</div>
+<br>
+<div class="masonry">
+  <div class="ARTbrick">
+    <a href={WarriorImage} target="_blank">
+      <img src={WarriorImage}>
+    </a>
   </div>
-  <ul role="list" class="link-card-grid" style="clear:both;">
-    <Card
-      href="/abstract-masterpieces"
-      title="Abstract Acrylic Masterpieces"
-      body="Check out a “special selections” gallery of some of the abstract paintings that Diana is personally proudest of, most of which have also been especially widely acclaimed by those familiar with her work, comissioned, or prominently displayed somewhere as standout pieces that arguably represent some of her best work!"
-    />
-    <Card
-      href="/abstract-surrealism"
-      title="Abstract Surrealist Acrylics"
-      body="Check out some of Diana's surrealist style acrylic paintings!"
-    />
-    <Card
-      href="/abstract-figures"
-      title="Abstract Figures"
-      body="Check out some of Diana's acrylics featuring abstract figures or bodies."
-    />
-    <Card
-      href="/abstract-geometry"
-      title="Abstract Geometries"
-      body="Check out some of Diana's abstract paintings which focus on geometric shapes as prominent compositional motifs!"
-    />
-    <Card
-      href="/abstract-landscapes"
-      title="Abstract or Impressionistic Landscapes"
-      body="Check out some of Diana's abstract paintings which evoke natrual or landscape scenery!"
-    />
-    <Card
-      href="/abstract-seascapes"
-      title="Abstract or Impressionistic Aquatic or Coastal Seascapes"
-      body="Check out some of Diana's abstract paintings which evoke natrual aquatic, coastal, or beach themed scenery!"
-    />
-  </ul>
-  <div class="masonry">
-    <div class="ARTbrick">
-      <a href={WarriorImage} target="_blank">
-        <img src={WarriorImage}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Bifrost} target="_blank">
-        <img src={Bifrost}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Breathe} target="_blank">
-        <img src={Breathe}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={HeartExplosion} target="_blank">
-        <img src={HeartExplosion}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={HeartBallet} target="_blank">
-        <img src={HeartBallet}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={GuardedHeart} target="_blank">
-        <img src={GuardedHeart}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={LittleOne} target="_blank">
-        <img src={LittleOne}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={FindYourCompass} target="_blank">
-        <img src={FindYourCompass}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={FluidSkyCompass} target="_blank">
-        <img src={FluidSkyCompass}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={AngelicPrismEos} target="_blank">
-        <img src={AngelicPrismEos}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={LungsRainbow} target="_blank">
-        <img src={LungsRainbow}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={MushroomRainbow} target="_blank">
-        <img src={MushroomRainbow}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={OraclarPalantir} target="_blank">
-        <img src={OraclarPalantir}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={PrismaticFolds} target="_blank">
-        <img src={PrismaticFolds}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={ThreeBodyRainbow} target="_blank">
-        <img src={ThreeBodyRainbow}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={BlueSmokySpring} target="_blank">
-        <img src={BlueSmokySpring}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={SpringWatersCascade} target="_blank">
-        <img src={SpringWatersCascade}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={SpringWatersFont} target="_blank">
-        <img src={SpringWatersFont}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={SpringWaters} target="_blank">
-        <img src={SpringWaters}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={WaveSand} target="_blank">
-        <img src={WaveSand}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={AngrySplash} target="_blank">
-        <img src={AngrySplash}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={GrainsSand} target="_blank">
-        <img src={GrainsSand}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={WildBeach} target="_blank">
-        <img src={WildBeach}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={WildOceanSrapy} target="_blank">
-        <img src={WildOceanSrapy}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={WildOceanSprayBeach} target="_blank">
-        <img src={WildOceanSprayBeach}>
-      </a> 
-    </div>
-    <div class="ARTbrick">
-      <a href={TucsonDay} target="_blank">
-        <img src={TucsonDay}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={AuroraCascade} target="_blank">
-        <img src={AuroraCascade}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={AuroranRings} target="_blank">
-        <img src={AuroranRings}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={BeautifulDecay} target="_blank">
-        <img src={BeautifulDecay}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Bernice} target="_blank">
-        <img src={Bernice}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={BlazingTumult} target="_blank">
-        <img src={BlazingTumult}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={BloomingHand} target="_blank">
-        <img src={BloomingHand}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={BloomingHandMeadow} target="_blank">
-        <img src={BloomingHandMeadow}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={BoxedIn2020} target="_blank">
-        <img src={BoxedIn2020}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={CascadesMountains2017} target="_blank">
-        <img src={CascadesMountains2017}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Chelsea2017} target="_blank">
-        <img src={Chelsea2017}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Cloudburst} target="_blank">
-        <img src={Cloudburst}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={CreativeConsumption} title="Creative Consumption, 2019" target="_blank">
-        <img src={CreativeConsumption} alt="Creative Consumption, 2019">
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={DeepColor} target="_blank">
-        <img src={DeepColor}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Garden} target="_blank">
-        <img src={Garden}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={GerminatedHorizons} target="_blank">
-        <img src={GerminatedHorizons}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={GlassHouses} target="_blank">
-        <img src={GlassHouses}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={GlowCave} target="_blank">
-        <img src={GlowCave}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={GrandesBaigneuses} target="_blank">
-        <img src={GrandesBaigneuses}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Happiness2017} title="Happiness, 2017" target="_blank">
-        <img src={Happiness2017} alt="Happiness, 2017">
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={HappyCircle} target="_blank">
-        <img src={HappyCircle}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={HazyMirage} target="_blank">
-        <img src={HazyMirage}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={HazyMystery} target="_blank">
-        <img src={HazyMystery}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={LavenderHaze} title="Lavender Haze" target="_blank">
-        <img src={LavenderHaze} alt="Lavender Haze">
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={MaroonSwatches2017} title="Maroon, 2017" target="_blank">
-        <img src={MaroonSwatches2017} alt="Maroon, 2017">
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={MobiusWomanAcrylic} target="_blank">
-        <img src={MobiusWomanAcrylic}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={NewOrleans2022jazz} title="New Orleans, 2022" target="_blank">
-        <img src={NewOrleans2022jazz} alt="New Orleans, 2022">
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={NorthCarolinaHills} title="North Carolina hills" target="_blank">
-        <img src={NorthCarolinaHills} alt="North Carolina hills">
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={PandemicMicrocosm} target="_blank">
-        <img src={PandemicMicrocosm}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={PiercingGaze2018} target="_blank">
-        <img src={PiercingGaze2018}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Pollen} target="_blank">
-        <img src={Pollen}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={RainbowRoad2018} target="_blank">
-        <img src={RainbowRoad2018}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={RothkoRED} title="Rothko RED" target="_blank">
-        <img src={RothkoRED} alt="Rothko RED">
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Smattering} target="_blank">
-        <img src={Smattering}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Smear} target="_blank">
-        <img src={Smear}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={ThreeAmaterasuPeaks} target="_blank">
-        <img src={ThreeAmaterasuPeaks}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={Unicorn} target="_blank">
-        <img src={Unicorn}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={WaterVapor} target="_blank">
-        <img src={WaterVapor}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={ZombieBloom} target="_blank">
-        <img src={ZombieBloom}>
-      </a>
-    </div>
-    <div class="ARTbrick">
-      <a href={SelfPortraitAcrylic} target="_blank">
-        <img src={SelfPortraitAcrylic}>
-      </a>
-    </div>
+  <div class="ARTbrick">
+    <a href={Bifrost} target="_blank">
+      <img src={Bifrost}>
+    </a>
   </div>
-</main>
-<div style="width:100%;padding: 0 0 2em 0;text-align:center;">
+  <div class="ARTbrick">
+    <a href={Breathe} target="_blank">
+      <img src={Breathe}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={HeartExplosion} target="_blank">
+      <img src={HeartExplosion}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={HeartBallet} target="_blank">
+      <img src={HeartBallet}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={GuardedHeart} target="_blank">
+      <img src={GuardedHeart}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={LittleOne} target="_blank">
+      <img src={LittleOne}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={FindYourCompass} target="_blank">
+      <img src={FindYourCompass}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={FluidSkyCompass} target="_blank">
+      <img src={FluidSkyCompass}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={AngelicPrismEos} target="_blank">
+      <img src={AngelicPrismEos}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={LungsRainbow} target="_blank">
+      <img src={LungsRainbow}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={MushroomRainbow} target="_blank">
+      <img src={MushroomRainbow}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={OraclarPalantir} target="_blank">
+      <img src={OraclarPalantir}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={PrismaticFolds} target="_blank">
+      <img src={PrismaticFolds}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={ThreeBodyRainbow} target="_blank">
+      <img src={ThreeBodyRainbow}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={BlueSmokySpring} target="_blank">
+      <img src={BlueSmokySpring}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={SpringWatersCascade} target="_blank">
+      <img src={SpringWatersCascade}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={SpringWatersFont} target="_blank">
+      <img src={SpringWatersFont}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={SpringWaters} target="_blank">
+      <img src={SpringWaters}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={WaveSand} target="_blank">
+      <img src={WaveSand}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={AngrySplash} target="_blank">
+      <img src={AngrySplash}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={GrainsSand} target="_blank">
+      <img src={GrainsSand}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={WildBeach} target="_blank">
+      <img src={WildBeach}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={WildOceanSrapy} target="_blank">
+      <img src={WildOceanSrapy}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={WildOceanSprayBeach} target="_blank">
+      <img src={WildOceanSprayBeach}>
+    </a> 
+  </div>
+  <div class="ARTbrick">
+    <a href={TucsonDay} target="_blank">
+      <img src={TucsonDay}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={AuroraCascade} target="_blank">
+      <img src={AuroraCascade}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={AuroranRings} target="_blank">
+      <img src={AuroranRings}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={BeautifulDecay} target="_blank">
+      <img src={BeautifulDecay}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={Bernice} target="_blank">
+      <img src={Bernice}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={BlazingTumult} target="_blank">
+      <img src={BlazingTumult}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={BloomingHand} target="_blank">
+      <img src={BloomingHand}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={BloomingHandMeadow} target="_blank">
+      <img src={BloomingHandMeadow}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={BoxedIn2020} target="_blank">
+      <img src={BoxedIn2020}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={CascadesMountains2017} target="_blank">
+      <img src={CascadesMountains2017}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={Chelsea2017} target="_blank">
+      <img src={Chelsea2017}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={Cloudburst} target="_blank">
+      <img src={Cloudburst}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={CreativeConsumption} title="Creative Consumption, 2019" target="_blank">
+      <img src={CreativeConsumption} alt="Creative Consumption, 2019">
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={DeepColor} target="_blank">
+      <img src={DeepColor}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={Garden} target="_blank">
+      <img src={Garden}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={GerminatedHorizons} target="_blank">
+      <img src={GerminatedHorizons}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={GlassHouses} target="_blank">
+      <img src={GlassHouses}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={GlowCave} target="_blank">
+      <img src={GlowCave}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={GrandesBaigneuses} target="_blank">
+      <img src={GrandesBaigneuses}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={Happiness2017} title="Happiness, 2017" target="_blank">
+      <img src={Happiness2017} alt="Happiness, 2017">
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={HappyCircle} target="_blank">
+      <img src={HappyCircle}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={HazyMirage} target="_blank">
+      <img src={HazyMirage}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={HazyMystery} target="_blank">
+      <img src={HazyMystery}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={LavenderHaze} title="Lavender Haze" target="_blank">
+      <img src={LavenderHaze} alt="Lavender Haze">
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={MaroonSwatches2017} title="Maroon, 2017" target="_blank">
+      <img src={MaroonSwatches2017} alt="Maroon, 2017">
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={MobiusWomanAcrylic} target="_blank">
+      <img src={MobiusWomanAcrylic}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={NewOrleans2022jazz} title="New Orleans, 2022" target="_blank">
+      <img src={NewOrleans2022jazz} alt="New Orleans, 2022">
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={NorthCarolinaHills} title="North Carolina hills" target="_blank">
+      <img src={NorthCarolinaHills} alt="North Carolina hills">
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={PandemicMicrocosm} target="_blank">
+      <img src={PandemicMicrocosm}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={PiercingGaze2018} target="_blank">
+      <img src={PiercingGaze2018}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={Pollen} target="_blank">
+      <img src={Pollen}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={RainbowRoad2018} target="_blank">
+      <img src={RainbowRoad2018}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={RothkoRED} title="Rothko RED" target="_blank">
+      <img src={RothkoRED} alt="Rothko RED">
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={Smattering} target="_blank">
+      <img src={Smattering}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={Smear} target="_blank">
+      <img src={Smear}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={ThreeAmaterasuPeaks} target="_blank">
+      <img src={ThreeAmaterasuPeaks}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={Unicorn} target="_blank">
+      <img src={Unicorn}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={WaterVapor} target="_blank">
+      <img src={WaterVapor}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={ZombieBloom} target="_blank">
+      <img src={ZombieBloom}>
+    </a>
+  </div>
+  <div class="ARTbrick">
+    <a href={SelfPortraitAcrylic} target="_blank">
+      <img src={SelfPortraitAcrylic}>
+    </a>
+  </div>
+</div>
+<div style="width:100%;padding:1em 0 2em 0;text-align:center;">
   <a href="/" class="rainbow rainbow_border" style="vertical-align:middle;font-size:1.5em;">&#x1f3e0;&#x202f;&#x1f519;</a>
 </div>
-</MainLayout>
 
-
-
-
-
+<script type="text/JavaScript">
+  document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 38:
+        window.scrollTo(0,0);
+        break;
+      case 40:
+        window.scrollTo(0, document.body.scrollHeight);
+        break;
+    }
+  };
+</script>

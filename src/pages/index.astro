@@ -11,8 +11,10 @@ console.log('index.astro loaded');
 	@import "./../styles/buttons.scss";
 </style>
 <MainLayout title="Welcome to Diana’s ART!">
-  <main>
-		<h1>Welcome to <a href="/art" class="text_gradient">Diana’s ART</a> portfolio!</h1>
+  <main style="padding-bottom:0;">
+		<div style="margin:0 auto 2em auto;text-align:center;">
+			<h1>Welcome to <a href="/art" class="text_gradient">Diana’s ART</a> portfolio!</h1>
+		</div>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="/acrylic"
@@ -22,7 +24,7 @@ console.log('index.astro loaded');
 			<Card
 				href="/watercolor"
 				title="Watercolors"
-				body="🎨 Check out Diana’s watercolor paintings! 💦 (including some beautifully blended mixed-media watercolor＆pens composites)"
+				body="🎨 Check out Diana’s watercolor paintings! 💦 (including some beautifully blended mixed-media watercolor＆pens composites)&#x202f;&#x1f58a;&#xfe0f;"
 			/>
 		</ul>
 		<p class="instructions">

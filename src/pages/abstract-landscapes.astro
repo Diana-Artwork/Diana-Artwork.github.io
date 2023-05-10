@@ -15,7 +15,7 @@ import ThreeAmaterasuPeaks from './../images/acrylic/Three_Amaterasu_Peaks.png';
   @import "./../styles/carousel.scss";
   @import "./../styles/masonry.scss";
   @import "./../styles/buttons.scss";
-  #h1landscapes { margin:1em auto 1em auto;text-align:center;max-width:70%; }
+  #h1landscapes { margin:0 auto;max-width:70%; }
   .landsapes_gradient {
     position: relative;
     background-image: linear-gradient(135deg, #000000 0%, #5c514f 10%, #7a7781 25%, #8f635d 50%, #9d9963 75%, #c2b4b7 100%);
@@ -24,7 +24,7 @@ import ThreeAmaterasuPeaks from './../images/acrylic/Three_Amaterasu_Peaks.png';
     text-shadow: 1px 1px 2px rgba(0,0,0, 0.3);
   }
 </style>
-<div style="margin:0;">
+<div style="margin:2em auto 1em auto;text-align:center;">
   <h1 id="h1landscapes">Diana&rsquo;s <span class="landsapes_gradient">Abstract Landscapes</span>
     <span>&#x202f;&#x1f5bc;&#x1f58c;</span>
   </h1>
@@ -134,76 +134,90 @@ import ThreeAmaterasuPeaks from './../images/acrylic/Three_Amaterasu_Peaks.png';
 </div>
 
 <script type="text/JavaScript">
-const track = document.querySelector('.carousel__track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel__button--right');
-const prevButton = document.querySelector('.carousel__button--left');
-const dotsNav = document.querySelector('.carousel__nav');
-const dots = Array.from(dotsNav.children);
-const slideWidth = slides[0].getBoundingClientRect().width;
-// Arrange SLIDES next to one another
-const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + 'px';  
-}
-slides.forEach(setSlidePosition);
-// MOVE slide
-const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
-  const currentDot = dotsNav.querySelector('.current-slide');
-  track.style.transform = 'translateX(-'+ targetSlide.style.left + ')';
-  currentSlide.classList.remove('current-slide');
-  targetSlide.classList.add('current-slide');
-  currentDot.classList.remove('current-slide');
-  targetDot.classList.add('current-slide');
-  if (targetIndex === 0) {
-    prevButton.classList.add('hidden');
-    nextButton.classList.remove('hidden');
-  } else if (targetIndex == slides.length - 1) {
-    prevButton.classList.remove('hidden');
-    nextButton.classList.add('hidden');
-  } else {
-    prevButton.classList.remove('hidden');
-    nextButton.classList.remove('hidden');
+  const track = document.querySelector('.carousel__track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel__button--right');
+  const prevButton = document.querySelector('.carousel__button--left');
+  const dotsNav = document.querySelector('.carousel__nav');
+  const dots = Array.from(dotsNav.children);
+  const slideWidth = slides[0].getBoundingClientRect().width;
+  // Arrange SLIDES next to one another
+  const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';  
   }
-}
-// click LEFT moves slides to the Left
-function handleLeft(e) {
-  const currentSlide = track.querySelector('.current-slide');
-  const prevSlide = currentSlide.previousElementSibling;
-  const slideIndex = slides.findIndex(slide => slide === prevSlide);
-  const targetDot = dots[slideIndex];
-  //move to the next slide
-  moveToSlide(currentSlide, prevSlide, targetDot, slideIndex);  
-  if (prevSlide == currentSlide) {
-    prevButton.classlist.add('hidden');
-    moveToSlide(currentSlide, prevSlide, targetDot);
+  slides.forEach(setSlidePosition);
+  // MOVE slide
+  const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
+    const currentDot = dotsNav.querySelector('.current-slide');
+    track.style.transform = 'translateX(-'+ targetSlide.style.left + ')';
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+    currentDot.classList.remove('current-slide');
+    targetDot.classList.add('current-slide');
+    if (targetIndex === 0) {
+      prevButton.classList.add('hidden');
+      nextButton.classList.remove('hidden');
+    } else if (targetIndex == slides.length - 1) {
+      prevButton.classList.remove('hidden');
+      nextButton.classList.add('hidden');
+    } else {
+      prevButton.classList.remove('hidden');
+      nextButton.classList.remove('hidden');
+    }
   }
-}
-prevButton.addEventListener('click', event => {
-  this.handleLeft(event);
-})
-this.doc?.keydown(function(event) {
-  if (event.keycode === 37) this.handleLeft(event);
-})
-// click RIGHT moves slides to the Right
-function handleRight(e) {
-  const currentSlide = track.querySelector('.current-slide');
-  const nextSlide = currentSlide.nextElementSibling;
-  const slideIndex = slides.findIndex(slide => slide === nextSlide);
-  const targetDot = dots[slideIndex];
-  // move to the next slide
-  if (slideIndex != -1) 
-    moveToSlide(currentSlide, nextSlide, targetDot, slideIndex);
-}
-nextButton.addEventListener('click', event => {
-  this.handleRight(event);
-})
-// clicking the nav indicators moves to that slide
-dotsNav.addEventListener('click', e => {
-  const targetDot = e.target.closest('button');
-  if (!targetDot) return;
-  const currentSlide = track.querySelector('.current-slide');
-  const targetIndex = dots.findIndex(dot => dot === targetDot);
-  const targetSlide = slides[targetIndex];
-  moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
-})
+  // click LEFT moves slides to the Left
+  function handleLeft(e) {
+    const currentSlide = track.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
+    const slideIndex = slides.findIndex(slide => slide === prevSlide);
+    const targetDot = dots[slideIndex];
+    //move to the next slide
+    moveToSlide(currentSlide, prevSlide, targetDot, slideIndex);  
+    if (prevSlide == currentSlide) {
+      prevButton.classlist.add('hidden');
+      moveToSlide(currentSlide, prevSlide, targetDot);
+    }
+  }
+  prevButton.addEventListener('click', event => {
+    this.handleLeft(event);
+  })
+  // click RIGHT moves slides to the Right
+  function handleRight(e) {
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+    const slideIndex = slides.findIndex(slide => slide === nextSlide);
+    const targetDot = dots[slideIndex];
+    // move to the next slide
+    if (slideIndex != -1) 
+      moveToSlide(currentSlide, nextSlide, targetDot, slideIndex);
+  }
+  nextButton.addEventListener('click', event => {
+    this.handleRight(event);
+  })
+  // clicking the nav indicators moves to that slide
+  dotsNav.addEventListener('click', e => {
+    const targetDot = e.target.closest('button');
+    if (!targetDot) return;
+    const currentSlide = track.querySelector('.current-slide');
+    const targetIndex = dots.findIndex(dot => dot === targetDot);
+    const targetSlide = slides[targetIndex];
+    moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
+  })
+  // handle arrow keys carousel
+  document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        handleLeft(e);
+        break;
+      case 38:
+        window.scrollTo(0,0);
+        break;
+      case 39:
+        handleRight(e);
+        break;
+      case 40:
+        window.scrollTo(0, document.body.scrollHeight);
+        break;
+    }
+  }; 
 </script>
