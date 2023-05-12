@@ -5,7 +5,8 @@ export interface Props {
 const { title } = Astro.props;
 ---
 <style lang="scss" scoped>
-  @import "../styles/buttons.scss";
+  @import "./../styles/buttons.scss";
+  @import "./../styles/styles.scss";
   footer {
     margin: auto;  
 		padding: 0 0 1.5rem 0;
@@ -19,10 +20,17 @@ const { title } = Astro.props;
         flex-grow: 1;
       }
     }
+    #footer_gradient {
+      position: relative;
+      background-image: linear-gradient(135deg, #E40303 0%, #FF8C00 25%, #FFED00 50%, #008026 75%, #24408E 90%, #732982 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 2px rgba(0,0,0, 0.3);
+    }
   }
 </style>
 <footer>
-  <h2 class="text_gradient">Let’s Get Social!</h2>
+  <h2 id="footer_gradient">Let’s Get Social!</h2>
   <div id="footer_flex_container">
     <a 
       href="https://www.instagram.com/dianacgriffith/" 

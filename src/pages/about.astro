@@ -17,9 +17,13 @@ import Diana_working from './../images/webpages-assets/Diana_working.png';
     margin: 0 auto;
 		padding: 1.5rem;
 		max-width: 90vw;
+    .img_container {
+      margin: 0 auto;
+      text-align: center;
+    }
     .Diana_images {
       border-radius: 50%;
-      width: 100%;
+      width: 75%;
     }
   }
   .well {
@@ -39,11 +43,13 @@ import Diana_working from './../images/webpages-assets/Diana_working.png';
       <h1 class="text_gradient" style="margin:0 auto;">About Diana</h1>
       <a href="/" class="rainbow rainbow_border" style="font-size:1.5em;position:absolute;top:1em;right:1em;">&#x1f3e0;&#x202f;&#x1f519;</a>
     </div>
-    <p class="well" style="clear:both;">Diana Christine Griffith is an Artist, Writer, Social Worker, Community Organizer, Psychoeducational Presenter, and Public Speaker.</p>
+    <p class="well">Diana Christine Griffith is an Artist, Writer, Social Worker, Community Organizer, Psychoeducational Presenter, and Public Speaker.</p>
     <br>
-    <img src={Diana_portrait} 
-      alt="picture of Diana" 
-      class="Diana_images">
+    <div class="img_container">
+      <img src={Diana_portrait} 
+        alt="picture of Diana" 
+        class="Diana_images">
+    </div>
     <br><br>
     <section class="well">
       <h2 class="text_gradient" style="margin:0;">Diana’s Vision</h2>
@@ -56,6 +62,8 @@ import Diana_working from './../images/webpages-assets/Diana_working.png';
       <p><a href="/" class="rainbow rainbow_border" style="text-decoration:none;color:black;">&#127968;&nbsp;return to Homepage</a></p>
     </section>
     <br>
-    <img src={Diana_working} alt="Diana working" class="Diana_images">
+    <div class="img_container">
+      <img src={Diana_working} alt="Diana working" class="Diana_images">
+    </div>
   </main>
 </MainLayout>
