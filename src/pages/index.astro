@@ -9,6 +9,10 @@ console.log('index.astro loaded');
 <style lang="scss" scoped>
 	@import "./../styles/styles.scss";
 	@import "./../styles/buttons.scss";
+	#greetings_from_Orlando_image {
+		-webkit-mask-image: radial-gradient(farthest-corner at 89% 89%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(farthest-corner at 89% 89%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
+	}
 </style>
 <MainLayout title="Welcome to Diana’s ART!">
   <main style="padding-bottom:0;">
@@ -29,8 +33,8 @@ console.log('index.astro loaded');
 		</ul>
 		<p class="instructions">
 			<strong class="text_gradient" style="font-size:2rem;">What is Art?</strong>
-			<br>Follow the poignant journey of Diana’s creative works as she continues to contemplate that question and boldly experiment with abstract artistic expressions using a plethora of innovative techniques across a variety of (often mixed) media!
-      <br><br>Her work has many inspirations, but she particularly admires many of the styles and methodologies pioneered by some of the <code>“<a href="https://www.goodreads.com/book/show/56698434-9th-street-women" target="_blank">9th Street Women</a>”</code> such as Lee Krasner or Elaine de Kooning, in addition to the celebrated Japanese abstract artist Yayoi Kusama, among many others… 
+			<br>Follow the poignant journey of Diana’s creative process as she continues to contemplate that question and boldly experiment with abstract artistic expressions using a plethora of innovative techniques across a variety of (often mixed) media!
+      <br><br>Her work has many inspirations, but she particularly admires the styles and methodologies pioneered by some of the <code>“<a href="https://www.goodreads.com/book/show/56698434-9th-street-women" target="_blank">9th Street Women</a>”</code> such as Lee Krasner or Elaine de Kooning, in addition to the celebrated <a href="http://yayoi-kusama.jp" target="_blank">Japanese abstract artist Yayoi Kusama</a>, among many others… 
 			<br><br>Alternatively, if you’re curious to learn about some impressive accomplishments of inspirational women in the Orlando area, you can explore some of Diana’s <a href="https://www.orlandoladyboss.com/about-diana/">past work here</a> or check out her <a href="https://www.orlandoladyboss.com/category/podcast/" target="_blank">Orlando Lady Boss podcast</a>.
 		</p>
 		<ul role="list" class="link-card-grid">
@@ -46,7 +50,9 @@ console.log('index.astro loaded');
 			/>
 		</ul>
 		<div style="text-align:center;">
-			<img src={greetings_from_Orlando_Diana} width="60%" style="border-radius:29%;">
+			<a href="/orlando" title="Click here for recommended resources＋opportunities for ARTISTS!">
+				<img id="greetings_from_Orlando_image" src={greetings_from_Orlando_Diana} width="60%" style="border-radius:29%;">
+			</a>
 		</div>
 	</main>
   <Footer title="Footer"></Footer>

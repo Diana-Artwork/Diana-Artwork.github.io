@@ -1,0 +1,54 @@
+---
+import MainLayout from './../layouts/MainLayout.astro';
+import Card from './../components/Card.astro';
+import bowArtemesian from './../images/webpages-assets/bow-arrow_Artemesian.png';
+---
+<style lang="scss" scoped>
+  @import "./../styles/styles.scss";
+  @import "./../styles/buttons.scss";
+  #h1orlando { 
+    font-size: 1.5em;
+  }
+  @media only screen and (max-width: 767px) {
+    #h1orlando {
+      margin-top: 2.5em;
+    }
+  }
+</style>
+<MainLayout title="Here are some great resources for Central Florida artists!">
+  <main style="padding-bottom:0;">
+    <div style="margin:2em auto 1em auto;text-align:center;">
+      <h1 id="h1orlando">Recommended Resources or Opportunities for Artists, particularly those located across Central Florida or in <span class="text_gradient">Orlando</span>, “the City Beautiful”⛲</h1>
+      <a href="/" class="rainbow rainbow_border" style="font-size:1.5em;position:absolute;top:1em;right:1em;">&#x1f3e0;&#x202f;&#x1f519;</a>
+    </div>
+    <div style="text-align:center;margin:1em;">
+      <img src={bowArtemesian} style="width:5em;">
+    </div>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://omart.org/events/1st_thursdays/"
+        title="🖼 “First Thursdays” monthly thematic local artists’ exhibits at the Orlando Museum of Art!"
+        body="From 6:00-9:00pm on the first Thursday of each month, Central Florida has the opportunity to discover local artists, listen to live music, and mingle with an eclectic mix of people at “Orlando’s original Art Party” which has been going on for several decades (and includes a cash bar available plus local café offerings). Admission to “1st Thursdays” is free for OMA members or otherwise quite affordable and includes the featured museum exhibition as well as free parking. Look no further for a great date night option!"
+      />
+      <Card
+        href="https://omart.org/education/class/art_night_out/"
+        title="🎨🖌 “ART Night Out” or other Orlando Museum of Art classes…"
+        body="This event is hosted some Wednesdays at the Orlando Museum of Art. Bring a date or come alone and meet some new friends! Each evening’s event features a different theme. Work alongside an art teacher to create your own piece by the end of the evening. Class price includes all materials."
+      />
+      <Card
+        href="https://crealde.org"
+        title="🎨🖌 Crealdé School of Art classes since 1975"
+        body="This Winter Park nonprofit community arts organization offers over 125 visual arts classes and humanities-based programs at their two Winter Park locations plus additional classes offered at the Jessie Brock Community Center in Winter Garden. They offer instruction in an impressive variety of artistic media and are very inclusive."
+      />
+      <Card
+        href="https://www.samflaxorlando.com"
+        title="🎨🖌 SAM FLAX"
+        body="If you want excellent fine art or drafting supplies or need framing services and you prefer a knowledgable family business, its Orlando location is at 1800 East Colonial Drive."
+      />
+    </ul>
+    <br>
+    <div style="width:100%;padding: 0 0 2em 0;text-align:center;">
+      <a href="/" class="rainbow rainbow_border" style="vertical-align:middle;font-size:1.5em;">&#x1f3e0;&#x202f;&#x1f519;</a>
+    </div>
+  </main>
+</MainLayout>

@@ -1,42 +1,116 @@
 ---
 import PointillismSignature from './../images/webpages-assets/Diana_Pointillism_Signature.jpg';
 import SelfPortrait from './../images/webpages-assets/Diana_self-portrait.jpg';
+import HeartExplosion from './../images/acrylic/Heart_Explosions/HEARTS_EXPLOSION_20x20_mixed_media.jpg';
 import MainLayout from './../layouts/MainLayout.astro';
-
+import Card from './../components/Card.astro';
 ---
 <style lang="scss" scoped>
 	@import "./../styles/styles.scss";
   @import "./../styles/buttons.scss";
+  #h1art { margin:0 auto; }
+  #performance_accessibility { max-width: 89vw; margin: 0 auto; }
+  .linkCard_container { margin:0 1em 0 1em; }
+  @media screen and (min-width: 600px) {
+    .linkCard_container {
+      width:55vw;
+      margin: 0 auto;
+      .link-card * {
+        text-align: left;
+      }
+    }
+  }
+  #pointillismImage {
+    margin: 0 auto;
+    max-height:55vh;
+    border-radius: 13% 21% 34% 55%;
+    transition: all 4s;
+    //-webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 50%);
+    //mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 50%);
+    -webkit-mask-image: radial-gradient(farthest-corner at 55% 89%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 89%);
+    mask-image: radial-gradient(farthest-corner at 55% 89%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 89%);
+  }
+  #DianaSelfPortraitImage {
+    border-radius: 34% 55% 13% 21%;
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.89) 13%, rgba(0, 0, 0, 0) 89%);
+    mask-image: radial-gradient(rgba(0, 0, 0, 0.89) 13%, rgba(0, 0, 0, 0) 89%);
+    max-height:80vh;
+  }
+  #Diana_portrait_background {
+    background-image: url('./../images/acrylic/Heart_Explosions/HEARTS_EXPLOSION_20x20_mixed_media.jpg');
+    background-size: 100% 154%;
+    background-repeat: no-repeat;
+    overflow: visible;
+    max-height:80vh;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    border-radius: 34% 55% 13% 21%;
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 89%);
+    mask-image: radial-gradient(rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 89%);
+
+  }
+  @media only screen and (max-width: 767px) {
+    #h1art {
+      margin-top: 1em;
+    }
+    #pointillismImage { max-height: 25vh; max-width: 89%; }
+    #Diana_portrait_background, #DianaSelfPortraitImage {
+      max-width: 89%;
+    }
+  }
 </style>
 <MainLayout>
-  <div style="margin:1em auto 1em auto;text-align:center;max-width:70vw;">
-    <h1 style="">
+  <div style="margin:2em auto 1em auto;text-align:center;">
+    <h1 id="h1art">
       <span>&#x2764;&#xfe0f;&#x202f;</span>
-      <span class="text_gradient">Thanks for your interest in Diana's ART!</span>
-      <span>&#x202f;&#x1f642;</span>
+      <span class="text_gradient">Thanks for your interest in Diana’s ART!</span>
     </h1>
     <a href="/" class="rainbow rainbow_border" style="font-size:1.5em;position:absolute;top:1em;right:1em;">&#x1f3e0;&#x202f;&#x1f519;</a>
   </div>
-  <div style="text-align:center;">
-    <img src={PointillismSignature} style="max-width:55vw;border-radius:5%;">
+  <div style="margin:0 auto;text-align:center;">
+    <a href="/about">
+      <img src={PointillismSignature} id="pointillismImage">
+    </a>
   </div>
   <br>
-  <div style="margin:0 auto;">
-    <p style="font-size:1.5em;font-weight:bold;max-width:50ch;">B.F.&#x202f;Griffith, the coder&#xff06;webmaster who created this site, dedicates it with love to showcasing the amazing art of his awesomely talented wife, Diana!&#x202f;&#x2764;&#xfe0f;
-      <br><br>He feels very fortunate to have such a supportive&#xff06;creative partner who can always light up a room with her intellect and infectious enthusiasm.&#x202f;&#x2728;
-    </p>
+  <div class="linkCard_container">
+    <Card
+      href="https://github.com/Diana-Artwork"
+      title="DEDICATION"
+      body="&#x1f596;&#x1f3fc;&#x202f;B.F.&#x202f;Griffith, the coder&#xff06;webmaster who created this site, feels quite proud to lovingly dedicate it to showcasing as much as possible of the amazing art that his awesomely talented wife, Diana, has created!&#x202f;&#x2764;&#xfe0f; He is very fortunate to have such a supportive&#xff06;creative partner who can always light up a room with her perspicacious intellect or infectious enthusiasm.&#x202f;&#x2728; Additionally, if you have ever encouraged or directly supported Diana’s art in any capacity whatsoever, we are especially grateful＆appreciative of that. It really means a lot, as unfortunately far too few people in our society receive the encouragement or resources or mentorship they should in order to discover the joyful expressions they deserve to explore through creative endevors."
+    />
   </div>
   <br>
-  <div style="text-align:center;">
-    <img src={SelfPortrait} style="max-width:25vw;border-radius:25%;">
+  <div id="Diana_portrait_background" style="margin:0 auto;text-align:center;">
+    <img src={SelfPortrait} id="DianaSelfPortraitImage">
+  </div>
+  <div style="margin:1em auto 1em auto;">
+    <ul id="performance_accessibility" role="list" class="link-card-grid" style="margin:0 1em 0 1em;">
+      <Card
+        href="https://github.com/Diana-Artwork"
+        title="Performance"
+        body="Due to the limitations of GitHub pages hosting, larger galleries of images (such as the entire “masonry wall” of all acrylics) will load more slowly, requiring several seconds to fully render, whereas more tightly thematically selected galleries containing fewer images focused around a particular theme should load much more quickly! Your patience＆understanding if you wish to scroll through some of the larger collections is appreciated."
+      />
+      <Card
+        href="https://github.com/Diana-Artwork"
+        title="Accessibility"
+        body="Considerable effort has been made in attempt to make this site “easy to view” with what are hopefully conveniently responsive layouts across a wide variety of devices, including smartphones. However, because it primarily functions as a visual arts galleries portfolio website, less effort has yet been made to make it fully robustly accessible for screen readers, although keyboard or touch controls to navigate its pages or galleries should work mostly as one would hope＆expect; moreover, if there are specific areas where you notice that we could use some significant improvement regarding accessibility or ease of user experience, please do feel free to let us know! Speaking of which…"
+      />
+    </ul>
+  </div>
+  <div class="linkCard_container">
+    <Card
+      href="https://github.com/Diana-Artwork/Diana-Artwork.github.io/issues"
+      title="Have you noticed any typos or “bugs” while browsing these galleries that you would like to report? (such as a display or navigational issue when viewing this website using a particular device or browser) Or perhaps you have a suggestion regarding how this site’s structure or functionality could potentially be improved or augmented‽"
+      body="If so, please click here to check out the GitHub “issues” on the open-source repository which so conveniently serves up this site; they are preferred as its official “bug” tracking mechanism, new feature or update proposal tool, or content expansion requestor… If the problem or idea you wish to submit has not yet been discussed in any existing issues already reported or suggested which you might like to endorse or comment on, then please feel free to open a new issue. We welcome your feedback, and are happy to seriously consider any constructive recommendations from anyone who has taken the time to peruse this website; please do not hesitate to let us know how we might find even better ways to help more people enjoy Diana’s amazing art, which I hope we can all agree that the world definitely needs to see more of!&#x202f;&#x1f596;&#x1f3fc;"
+    />
   </div>
   <br>
-  <div style="margin:0 auto;">
-    <p style="font-size:1.5em;font-weight:bold;max-width:50ch;">This website prefers GitHub &ldquo;issues&rdquo; on its&nbsp;
-      <a href="https://github.com/Diana-Artwork/Diana-Artwork.github.io/issues">open-source repository</a> as its official &ldquo;bug&rdquo; tracker, feature augmentation proposal tool, or content expansion requestor… If the problem or idea you wish to submit has not yet been discussed in any <a href="https://github.com/Diana-Artwork/Diana-Artwork.github.io/issues">existing issues already reported or suggested</a> which you might like to endorse or comment on, then please feel free to <a href="https://github.com/Diana-Artwork/Diana-Artwork.github.io/issues">open a new issue</a>. We welcome your feedback and are happy to consider any constructive recommendations from anyone who takes the time to peruse this site; please do not hesitate to let us know how we might find even better ways to help you enjoy Diana&rsquo;s amazing art!&#x202f;&#x1f596;&#x1f3fc;
-    </p>
-  </div>
-  <div style="width:100%;padding: 0 0 2em 0;text-align:center;">
+  <div style="width:100%;padding: 0.5em 0 2em 0;text-align:center;">
     <a href="/" class="rainbow rainbow_border" style="vertical-align:middle;font-size:1.5em;">&#x1f3e0;&#x202f;&#x1f519;</a>
   </div>
 </MainLayout>
